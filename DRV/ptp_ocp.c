@@ -2300,7 +2300,8 @@ ptp_ocp_devlink_info_get(struct devlink *devlink, struct devlink_info_req *req,
 	int err;
 
 #if LINUX_VERSION_CODE < KERNEL_VERSION(6, 2, 0)
-	err = devlink_info_driver_name_put(req, KBUILD_MODNAME);
+	err = 0; //Bug Fix: Causes Compile Error
+	// err = devlink_info_driver_name_put(req, KBUILD_MODNAME);
 	if (err)
 		return err;
 #endif
