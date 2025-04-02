@@ -1,11 +1,15 @@
 # Driver
 
 Driver is based on a kernel module for CentOS and Ubunutu. 
+This repository adds easy compile and install support to Oracle Linux Systems.  
 Kernel 5.12+ is recommended
 
-## Instruction
-Make sure vt-d option is enabled in BIOS.   
-Run the remake followed by modprobe ptp_ocp
+## Oracle Linux Instructions
+Make sure vt-d option is enabled in BIOS.
+1. Clone the project
+2. Install kernel-devel
+3. `cd /OL-timecard`
+4. Run `./remake` followed by `modprobe ptp_ocp`
 
 ## Outcome
 ```
