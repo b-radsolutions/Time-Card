@@ -20,6 +20,9 @@ case "$DIST" in
     centos*)
         KDIR=/usr/src/kernels/${KVER}
         ;;
+    oraclelinux*)
+        KDIR=/usr/src/kernels/${KVER}
+        ;;
     sle*)
         KDIR=/usr/src/linux-${KVER%-default}
         # In SUSE Linux Enterprise products, loading unsupported modules is disabled by default
