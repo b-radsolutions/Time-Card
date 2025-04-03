@@ -5,11 +5,21 @@ This repository adds easy compile and install support to Oracle Linux Systems.
 Kernel 5.12+ is recommended
 
 ## Oracle Linux Instructions
-Make sure vt-d option is enabled in BIOS.
-1. Clone the project
-2. Install kernel-devel
-3. `cd /OL-timecard`
-4. Run `./remake` followed by `modprobe ptp_ocp`
+Steps to install on OL systems, loaded on Ubuntu 20.04+ by default
+1. Make sure vt-d option is enabled in BIOS.
+2. Install kernel-devel, get your kernel version  
+   `$ uname -r`  
+   Ex. => `5.15.0-206.153.7.1.el8uek.x86_64`  
+   Yum Package will be in following format, change for your running kernel:   
+   `$ yum install kernel-uek-devel-5.15.0-206.153.7.1.el8uek.x86_64`
+    
+3. Download Driver from github, this fork has Native Oracle Linux Support  
+   `$ git clone --depth 1 -b download https://github.com/b-radsolutions/OL-timecard.git`  
+    
+4. Install Driver:  
+   $ `cd OL-timecard/`  
+   $ `./remake`  
+   $ `modprobe ptp_ocp`. 
 
 ## Outcome
 ```
